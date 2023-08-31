@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes curlyAnim {
+  0%{
+    transform: translateX(-25px);
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+}
+
+@keyframes boxAnim {
+  0%, 100%{
+    transform: translate3d(-5px, 0, 0) rotate(-1.5deg);
+  }
+  50%{
+    transform: translate3d(5px, 0, 0) rotate(1.5deg);
+  }
+}
+
+@keyframes planetAnim {
+  0%, 100%{
+    transform: translate3d(-5px, 0, 0);
+  }
+  50%{
+    transform: translate3d(5px, 0, 0);
+  }
+}

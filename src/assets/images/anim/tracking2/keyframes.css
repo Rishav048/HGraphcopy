@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@keyframes locAnim {
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  25%{
+    opacity: 1;
+    transform: scale(0);
+  }
+  35%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  90%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes droneAnim {
+  0%, 100%{
+    transform: rotate(-2.5deg);
+  }
+  50%{
+    transform: rotate(2.5deg);
+  }
+}
+
+@keyframes weightAnim {
+  0%, 100%{
+    transform: rotate(-1.5deg);
+  }
+  50%{
+    transform: rotate(1.5deg);
+  }
+}
+
+@keyframes finAnim {
+  0%, 100%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(15deg);
+  }
+}

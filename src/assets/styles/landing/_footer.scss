@@ -1,0 +1,133 @@
+/* Footer */
+.footerSec{
+    background: #e4f0f5;
+    padding-block: calc(90px * var(--resp)) calc(50px * var(--resp));
+    
+    &__logo{
+        height: calc(59px * var(--resp));
+        margin-bottom: calc(15px * var(--resp));
+        opacity: 0;
+    }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: calc(80px * var(--resp));
+    }
+
+    &__bottom{
+        margin-top: calc(50px * var(--resp));
+        border-radius: 10px;
+        font-family: var(--ff2);
+        font-size: var(--fs20);
+        background: #222;
+        color: #fff;
+        min-height: calc(78px * var(--resp));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: calc(25px * var(--resp));
+    } 
+    &__social{
+        display: flex;
+        gap: calc(30px * var(--resp));
+    }
+
+    h3{
+        font-size: var(--fs24);
+        font-weight: 400;
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+
+    h4{
+        font-family: var(--ff2);
+        font-size: var(--fs16);
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: calc(20px * var(--resp));
+    }
+
+   &__links{
+    padding-block: calc(30px * var(--resp));
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: calc(175px * var(--resp));
+    }
+
+    &.bb{
+        border-bottom: 2px solid #EFCFE4;
+    }
+   }
+
+
+   @media (max-width: 991.98px) {
+    &__links-wrapper{
+        display: flex;
+
+        > div{
+            width: 50%;
+
+            ul{
+                flex-direction: column;
+                gap: 0;
+                align-items: start;
+            }
+        }
+    }
+   }
+}
+
+@media (max-width:991.98px) {
+    .footerSec__links.bb{
+        border: none;
+    }
+}
+@media (max-width:767.98px) {
+    .footerSec__top{
+        text-align: center;
+        justify-content: center;
+    }
+    .footerSec h3{
+        text-align: center;
+    }
+    .footerSec__logo{
+        margin-inline: auto;
+    }
+    .footerSec p{
+        text-align: center;
+    }
+    .footerSec__bottom{
+        font-size: 14px;
+
+        img{
+
+        }
+    }
+    .footerSec__social{
+        gap: 15px;
+    }
+    .footerSec__social img{
+        height: 20px;
+    }
+    .search-product__inner input{
+        min-width: 20px;
+    }
+    .footerSec h4{
+        margin-bottom: 20px;
+    }
+    .footerSec__links{
+        padding-block: 30px 0;
+    }
+    
+    .footerSec__links li{
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,114 @@
+/* Header */
+.headerSec{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: calc(30px * var(--resp));
+    transition: 0.5s;
+    z-index: 111;
+    font-size: var(--fs16);
+
+    &__logo{
+        img{
+            height: calc(37px * var(--resp));
+        }
+    }
+    &.scrolling{
+        padding-top: 0px;
+        background-color: #fff;
+        top: 0;
+        box-shadow: 0 0 10px #cecece;
+    }
+
+    &__inner{
+        min-height: calc(90px * var(--resp));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: calc(30px * var(--resp));
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: calc(30px * var(--resp));
+        font-weight: bold;
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        li{
+            position: relative;
+
+            &.active{
+                &::before, &::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: calc(100%);
+                    width: calc(9px * var(--resp));
+                    height: calc(9px * var(--resp));
+                    border: 1px solid #222;
+                    border-radius: 50%;
+                    left: 0;
+                    background: var(--holo-grad);
+                    transition: 0.23s;
+                    transform: scale(1);
+                }
+                &::after{
+                    left: 15px;
+                }
+            }
+            
+        }
+    }
+   
+    &__btn{
+        span{
+            background: var(--holo-grad);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        text-transform: uppercase;
+        height: calc(56px * var(--resp));;
+        min-width: calc(150px * var(--resp));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: #222;
+        transition: 0.23s ease-out;
+
+        &:hover{
+            background: #000;
+        }
+    }
+
+    .menu-btn{
+        display: flex;
+        height: 30px;
+        padding: 10px;
+        align-items: center;
+        gap: 5px;
+        font-weight: 700;
+    }
+
+    @media (max-width: 991.98px) {
+        .container{
+            --bs-gutter-x: 2rem;
+        }
+        &__links, &__btn{
+            display: none;
+        }
+    }
+}
+
+

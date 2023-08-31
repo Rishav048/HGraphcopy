@@ -1,0 +1,67 @@
+/* numbersSec */
+
+.numbersSec{
+    background: #222;
+    color: #fff;
+    position: relative;
+    padding-block: calc(50px * var(--resp));
+
+    &__deco1{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    &__flex{
+        display: flex;
+        width: 100%;
+        align-items: start;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    &__single{
+        text-align: center;
+    }
+
+    &__count{
+        font-family: Bebas Neue;
+        font-size: var(--fs76);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    &__text{
+        font-weight: 100;
+        line-height: 1.2;
+    }
+
+
+    @media (max-width: 1200px) {
+        .container {
+            max-width: 900px;
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .numbersSec__deco1{
+        opacity: 0.25;
+    }
+}
+@media (max-width: 767.98px) {
+    .numbersSec__count {
+        font-size: 30px;
+    }
+    .numbersSec .container{
+        position: relative;
+        z-index: 1;
+    }
+    
+    .numbersSec__text{
+        font-size: 12px;
+    }
+}

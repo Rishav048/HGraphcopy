@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Literal';
+    src: url('Literal-Bold.eot');
+    src: local('Literal Bold'), local('Literal-Bold'),
+        url('Literal-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Literal-Bold.woff2') format('woff2'),
+        url('Literal-Bold.woff') format('woff'),
+        url('Literal-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Literal';
+    src: url('Literal-Light.eot');
+    src: local('Literal Light'), local('Literal-Light'),
+        url('Literal-Light.eot?#iefix') format('embedded-opentype'),
+        url('Literal-Light.woff2') format('woff2'),
+        url('Literal-Light.woff') format('woff'),
+        url('Literal-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Literal';
+    src: url('Literal-Regular.eot');
+    src: local('Literal'), local('Literal-Regular'),
+        url('Literal-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Literal-Regular.woff2') format('woff2'),
+        url('Literal-Regular.woff') format('woff'),
+        url('Literal-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

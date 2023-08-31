@@ -1,0 +1,132 @@
+/* subscribeSec */
+
+.subscribeSec{
+    padding-block: calc(50px * var(--resp)) calc(50px * var(--resp));
+    min-height: calc(100vh - (90px * var(--resp)));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__inner{
+        background: #222;
+        color: #fff;
+        border-radius: 20px;
+        padding: calc(145px * var(--resp)) calc(45px * var(--resp)); 
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__deco1{
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        width: calc(779px * var(--resp));
+    }
+    &__deco2{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        width: calc(705px * var(--resp));
+        height: auto;
+    }
+    &__layer0{
+        position: relative;
+        width: calc(705px * var(--resp));
+        height: auto;
+    }
+    &__layer1{
+        position: absolute;
+        inset: 0;
+        width: calc(705px * var(--resp));
+        height: auto;
+    }
+    &__content{
+        position: relative;
+        z-index: 1;
+        width: 60%;
+    }
+
+    .desc{
+        font-size: var(--fs24);
+        color: #EFECEC;
+    }
+
+    &__emailWrapper{
+        background: var(--holo-grad);
+        border-radius: 10px;
+        box-shadow: 3px 4px 4px 0px rgba(151, 134, 154, 0.13);
+        width: calc(528px * var(--resp));
+        height: calc(56px * var(--resp));
+        padding: 2px;
+        display: flex;
+        align-items: center;
+
+        input{
+            flex: 1;
+            height: calc(52px * var(--resp));
+            border:0;
+            border-radius: 10px 0 0 10px;
+            background-color: #222;
+            padding-inline: 25px;
+            color: #fff;
+            outline: none;
+
+            &::placeholder{
+                font-style: italic;
+            }
+        }
+
+        button{
+            background: var(--holo);
+            height: calc(52px * var(--resp));
+            width: calc(58px * var(--resp));
+            min-width: calc(58px * var(--resp));
+            outline: none;
+            border: none;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0;
+            border-radius: 10px;
+
+           img{
+            height: calc(17px * var(--resp));
+           }
+        }
+    }
+
+    @media (max-width:991px) {
+        &__emailWrapper {
+            width: 100%;
+        }
+        &__content {
+            width: 100%;
+        }
+        &__inner{
+            padding-bottom: 450px;
+        }
+    }
+}
+
+@media (max-width:768.98px) {
+    .subscribeSec{
+        min-height: auto;
+        padding-top: 0;
+    }
+    .subscribeSec__inner {
+        padding: 85px 20px 260px;
+    }
+    .subscribeSec__deco2 {
+        width: calc(405px * var(--resp));
+    }
+    .subscribeSec__content .head1 img{
+        height: 24px;
+    }
+    .row {
+        --bs-gutter-x: 5px;
+    }
+}

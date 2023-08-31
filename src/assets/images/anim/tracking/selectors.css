@@ -1,0 +1,51 @@
+#line-1{
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    animation: line12Anim 6s linear forwards infinite;
+    animation-delay: 2s;
+}
+#line-2{
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    animation: line12Anim 6s linear forwards infinite;
+    animation-delay: 4s;
+}
+#line-3{
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: line3Anim 6s linear forwards infinite;
+    animation-delay: 6s;
+}
+
+#loc-1{
+    opacity: 0;
+    transform-origin: 17px 521px;
+    animation: locAnim 6s linear forwards infinite;
+}
+#loc-2{
+    opacity: 0;
+    transform-origin: 221px 344px;
+    animation: locAnim 6s linear forwards infinite;
+    animation-delay: 2s;
+}
+#loc-3{
+    opacity: 0;
+    transform-origin: 62px 191px;
+    animation: locAnim 6s linear forwards infinite;
+    animation-delay: 4s;
+}
+#loc-4{
+    opacity: 0;
+    transform-origin: 358px 162px;
+    animation: locAnim 6s linear forwards infinite;
+    animation-delay: 6s;
+}
+
+#drone{
+    transform-origin: 127px 86px;
+    transform: rotate(-5deg);
+    animation: droneAnim 6s ease-in-out forwards infinite;
+}
+#drone-bags{
+    transform-origin: 127px 86px;
+    transform: rotate(-5deg);
+    animation: droneAnim 6s ease-in-out forwards infinite;
+    animation-delay: 1s;
+}

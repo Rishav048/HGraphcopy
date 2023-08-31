@@ -1,0 +1,19 @@
+// Partials
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typography";
+@import "partials/reset";
+@import "partials/common";
+
+// Components
+@import "components/layout";
+@import "components/buttons";
+@import "components/form";
+@import "components/tables";
+@import "components/datepicker";
+
+// custom styles
+@import "style-uj";
+@import "style-rc";
+@import "./styles-akash";
+@import "./style-ps";

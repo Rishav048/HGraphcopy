@@ -1,0 +1,68 @@
+* {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+      
+      /* trackDotLayer CSS */
+      @-webkit-keyframes hiwTrackDotAnim {
+        0% {
+            offset-distance: 0%;
+            opacity: 0;
+        }
+        10%{
+            offset-distance: 0%;
+            opacity: 1;
+        }
+        90%{
+            opacity: 1;
+            offset-distance: 100%;
+        }
+        100%{
+            opacity: 0;
+            offset-distance: 100%;
+        }
+      }
+      @keyframes hiwTrackDotAnim {
+        0% {
+            offset-distance: 0%;
+            opacity: 0;
+        }
+        10%{
+            offset-distance: 0%;
+            opacity: 1;
+        }
+        90%{
+            opacity: 1;
+            offset-distance: 100%;
+        }
+        100%{
+            opacity: 0;
+            offset-distance: 100%;
+        }
+      }
+      
+
+      .hiw-mob-svg.active #hiw-dot1, 
+.hiw-mob-svg.active #hiw-dot2, 
+.hiw-mob-svg.active #hiw-dot3, 
+.hiw-mob-svg.active #hiw-dot4{
+    opacity: 0;
+    -webkit-animation: hiwTrackDotAnim 5s linear forwards infinite;
+            animation: hiwTrackDotAnim 5s linear forwards infinite;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+}
+.hiw-mob-svg.active #hiw-dot1{
+    offset-path: path('M248.5 67C248.5 67 316 66.5 325 66.5C334 66.5 337 70.5 337 70.5C337 70.5 339.5 72 340.5 76.5C341.5 81 340.5 277 340.5 277');
+}
+.hiw-mob-svg.active #hiw-dot2{
+    offset-path: path('M120 315.001C120 315.001 46.4998 315 40.4998 315C34.4998 315 30.92 317.006 29 320.5C27.08 323.994 27.4998 327.501 27.4998 327.501V476.501');
+}
+.hiw-mob-svg.active #hiw-dot3{
+    offset-path: path('M273.5 538H326.5C326.5 538 332 537.5 336 540.5C340 543.5 340.5 548 340.5 548V709');
+}
+.hiw-mob-svg.active #hiw-dot4{
+    offset-path: path('M120 758.5H38.5C38.5 758.5 32.5 759.5 30 763.5C27.5 767.5 27.5 772 27.5 772V902');
+}

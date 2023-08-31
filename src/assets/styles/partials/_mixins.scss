@@ -1,0 +1,94 @@
+// Container flex properties
+@mixin flexBox($display: null, $fxFlow: null, $align: null, $justify: null) {
+  @if ($display !=null) {
+    display: $display;
+  }
+  @if ($fxFlow !=null) {
+    flex-flow: $fxFlow;
+  }
+  @if ($align !=null) {
+    align-items: $align;
+  }
+  @if ($justify !=null) {
+    justify-content: $justify;
+  }
+}
+
+// Clamp one line
+@mixin oneLineClamp($maxWidth) {
+  max-width: $maxWidth;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Clamp multiple lines
+@mixin multipleLinesClamp($numberLines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $numberLines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin fw($fwNumber) {
+  font-weight: $fwNumber;
+}
+
+@mixin ts($tsDuration) {
+  transition: all $tsDuration ease-in-out;
+}
+
+@mixin form-control {
+  height: 3.25rem;
+  padding-left: 1.13rem;
+  border-radius: 0.625rem;
+  border: 2px solid #fff;
+  background-color: rgba($color: #ffffff, $alpha: 0.6);
+  box-shadow: 3px 4px 4px rgba(151, 134, 154, 0.13);
+  @media (max-height: 760px), (max-width: 1450px){
+    height: 3rem;
+    border-radius: 0.575rem;
+  }
+  @media (max-width: 991.98px) {
+  padding-left: 1rem;
+  height: 2.8rem;
+  border-radius: 0.475rem;
+}
+@media (max-width: 767.98px) {
+    padding-left: 0.8rem;
+    height: 2.6875rem;
+  }
+  &::placeholder {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.75rem;
+    color: var(--neutral);
+  }
+}
+
+// Placeholders
+%gradientText {
+  background: var(--holo-grad);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+%gradientText--radial {
+  background: var(--holo-grad-radial);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%plainWhiteText {
+  background: -webkit-linear-gradient(0deg, white, white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%gridprop {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}

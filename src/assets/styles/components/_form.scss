@@ -1,0 +1,254 @@
+.holograf-form {
+  @include flexBox(flex, column nowrap, null, null);
+  gap: 1.5rem;
+  .form {
+    &-group {
+      .label {
+        padding-left: 0.25rem;
+        margin-bottom: 0.55rem;
+        letter-spacing: -0.02625rem;
+      }
+    }
+    &-control {
+      @include form-control;
+      &--textarea {
+        padding-block: 0.8rem;
+        height: 8rem;
+        min-height: 8rem;
+      }
+    }
+  }
+}
+
+.date-div {
+  &:hover {
+    .btn-fab {
+      &--pink {
+        background: #ffc1da;
+      }
+    }
+  }
+  .btn-fab {
+    top: 0;
+    right: 0;
+    pointer-events: none;
+  }
+}
+
+.selected-color {
+  flex: 1;
+  height: 100%;
+  color: var(--neutral);
+  @include flexBox(inline-flex, null, center, null);
+  gap: 0.85rem;
+  &.color-cover {
+    color: var(--text-dark);
+    gap: 0.65rem;
+    .text {
+      padding-top: 2px;
+    }
+  }
+}
+.select-div {
+  @include flexBox(flex, null, center, space-between);
+  padding: 0;
+  cursor: default;
+  pointer-events: none;
+  .btn-fab {
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    height: auto;
+    padding-top: 2px;
+    cursor: pointer;
+    pointer-events: auto;
+    img {
+      @include ts(0.3s);
+    }
+  }
+  &[aria-expanded="true"] {
+    .btn-fab {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.dropdown-menu-holograf {
+  border-radius: 0.625rem;
+  background: rgba($color: #fff, $alpha: 1);
+  box-shadow: var(--main-shadow);
+}
+
+// Checkboxes //
+// Add/Remove text checkbox
+.checkbox-wrapper {
+  display: inline-block;
+  @media (max-width: 767.98px) {
+    line-height: 0 !important;
+    label{
+      b{
+        font-size: 12px;
+      }
+    }
+  }
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+  }
+  input[type="checkbox"] + label {
+    position: relative;
+    margin-left: -4px;
+    @include flexBox(inline-flex, null, center, null);
+    // b {
+    //   margin-left: 0.65rem;
+    // }
+    & > span {
+      padding: 0;
+      @include flexBox(inline-flex, null, center, center);
+      margin-right: 0.65rem;
+      width: 1.375rem;
+      height: 1.375rem;
+      border-radius: 0.25rem;
+      border: 1px solid #efecec;
+      background-color: white;
+      cursor: pointer;
+      @include ts(0.3s);
+      @media (max-width: 767.98px) {
+        width: 0.9375rem;
+        height: 0.9375rem;
+        border-radius: 0.125rem;
+        margin-right: 0.35rem;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        background: url(./../images/icons/icon-green-tick.svg) no-repeat center;
+        border-radius: 0.25rem;
+        background-size: 0.38rem;
+        width: 1.375rem;
+        height: 1.375rem;
+        left: 0rem;
+        top: 0.025rem;
+        opacity: 0;
+        @include ts(0.3s);
+        transform-origin: 0% 100%;
+        @media (max-width: 767.98px) {
+          border-radius: 0.125rem;
+          width: 0.9375rem;
+          height: 0.9375rem;
+        }
+      }
+    }
+    & > div {
+      padding-top: 1px;
+      @include flexBox(inline-flex, null, center, null);
+    }
+    .text_remove {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  input[type="checkbox"] + label:hover > span,
+  input[type="checkbox"]:focus + label > span {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12) inset;
+    border-color: var(--text-dark);
+  }
+
+  input[type="checkbox"]:checked + label {
+    & > span {
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      border-color: var(--text-dark);
+      &:before {
+        background-size: 0.938rem;
+        opacity: 1;
+        @media (max-width: 767.98px) {
+          background-size: 0.625rem;
+        }
+      }
+    }
+    .text_add {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    .text_remove {
+      width: 3rem;
+      height: 0.75rem;
+      opacity: 1;
+    }
+  }
+}
+
+// Number field arrow styling
+.form-group--number {
+  position: relative;
+  input[type="number"] {
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  &-nav {
+    @include flexBox(inline-flex, column nowrap, null, null);
+    height: 3.25rem;
+    position: absolute;
+    right: 0rem;
+    top: 2rem;
+    border-radius: 0.625rem;
+    background: #f0fff4;
+    width: 3.25rem;
+    @media (max-height: 760px), (max-width: 1450px) {
+      border-radius: 0.575rem;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &-button {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    position: absolute;
+    height: 50%;
+    right: -3.25rem;
+    @include ts(0.3s);
+    border-radius: 0.625rem;
+    @include flexBox(inline-flex, null, center, center);
+    background: transparent;
+    font-family: "FontAwesome" !important;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    @media (max-height: 760px), (max-width: 1450px) {
+      border-radius: 0.575rem;
+      font-size: 1.125rem;
+      right: -3rem;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background: #d2f2db;
+    }
+    &.form-group--number-up {
+      top: 0;
+      padding-bottom: 1px;
+    }
+
+    &.form-group--number-down {
+      bottom: 0;
+      padding-top: 1px;
+    }
+  }
+}

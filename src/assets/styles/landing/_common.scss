@@ -1,0 +1,300 @@
+/* Common */
+.landing{
+    min-height: 100vh;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--ff1);
+    font-weight: 400;
+    font-size: var(--fs18);
+    color: #222;
+
+    a{
+        color: #222;
+    }
+}
+
+.heroSec{
+    background: url('../images/landing/hero/hero-bg.png') no-repeat top center;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 90px;
+}
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+
+.hgt{
+    background: var(--holo-grad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hrgt{
+    background: var(--holo-grad-radial);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.head1{
+    font-size: var(--fs72);
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+
+/* Search product form */
+.search-product{
+    width: calc(614px * var(--resp));
+    border-radius: 10px;
+    background: rgba(52, 52, 52, 0.80);
+    padding: calc(7.5px * var(--resp));
+    margin: 0 auto 0 auto;
+
+    &__inner{
+        border-radius: 7px;
+        background: #222;
+        height: calc(56px * var(--resp));
+        display: flex;
+        align-items: center;
+        padding-right: calc(7.5px * var(--resp));
+
+        .search-product__upload{
+            margin-left: 3px;
+            img{
+                height: calc(50px * var(--resp));
+            }
+        }
+
+        input{
+            flex: 1;
+            background: transparent;
+            box-shadow: none;
+            outline: none;
+            border:none;
+            padding: 0px 15px;
+            font-size: var(--fs18);
+            font-weight: 400;
+            color: #fff;
+
+            &::placeholder{
+                color: #D3D3D3;
+                font-style: italic;
+                font-weight: 100;
+            }
+        }
+
+        button{
+            flex: 0;
+            height: calc(44px * var(--resp));
+            border-radius: 7px;
+            background: #3E3E3E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 25px;
+            min-width: calc(136px * var(--resp));
+            transition: 0.23s ease-out;
+
+            &:hover{
+                background: #5e5e5e;
+            }
+        }
+    }
+}
+
+/* Fade in styles */
+.fade-in{
+    opacity: 0;
+    // transform: translateY(100px);
+    // transition: 1s ease-out;
+}
+// .fade-in.fade-in-active{
+//     opacity: 1;
+//     transform: translateY(0);
+// }
+// .fade-in.fade-in-delay{
+//     transition-delay: 0.35s;
+// }
+
+/* button */
+.button-dark{
+    font-size: var(--fs18);
+    font-weight: 400;
+    min-width: calc(169px * var(--resp));
+    height: calc(56px * var(--resp));
+    border-radius: 6px;
+    background: #222;
+    border:none;
+    box-shadow: 4px 6px 9px 0px rgba(47, 47, 47, 0.31);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.23s ease-out;
+
+    &:hover{
+        background: #000000;
+    }
+}
+
+
+.button-light{
+    position: relative;
+    display: flex;
+    font-size: var(--fs18);
+    font-weight: 400;
+    min-width: calc(169px * var(--resp));
+    width: calc(169px * var(--resp));
+    height: calc(56px * var(--resp));
+    border-radius: 6px;
+    background: var(--holo-grad);
+    border:none;
+    box-shadow: 4px 6px 9px 0px rgba(47, 47, 47, 0.31);
+    padding: 1px;
+    margin: 20px auto 20px auto;
+    
+
+    > span{
+        background: #222;
+        border-radius: 6px;
+        transition: 0.23s ease-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(54px * var(--resp));
+        width: 100%;
+    }
+
+    &:hover{
+        > span{
+            background: #000;
+            width: calc(169px * var(--resp));
+        } 
+    }
+}
+
+
+/* section-title-wrapper */
+.section-title-wrapper{
+    max-width: 60%;
+    margin-inline: auto; 
+}
+.desc{
+    color: var(--lught, #676767);
+}
+
+
+
+/* Animation up down */
+@keyframes animUpDown {
+    from{
+        transform: translateY(50px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+.anim-up-down.active{
+    animation: animUpDown 2s ease-in-out alternate infinite;
+}
+
+
+
+/* Smoth Bootstrap accordion transition */
+.accordion-button:focus {
+    box-shadow: none; /* Optional: Remove focus outline */
+  }
+  
+  .accordion-item {
+    overflow: hidden; /* Hide overflow content */
+  }
+  
+  .accordion-collapse {
+    transition:  0.5s linear; /* Smooth animation */
+  }
+
+
+  @media (max-width:991.98px) {
+    .desk-only{
+        display: none!important;
+    }
+  }
+  @media (min-width:992px) {
+    .mob-only{
+        display: none!important;
+    }
+  }
+  
+    @media (max-width:1800px) {
+        .container{
+            max-width: 1160px;
+        }
+    }
+
+    @media (max-width:1400px) {
+        .container{
+            max-width: 1040px;
+        }
+    }
+
+    @media (max-width:1300px) {
+        .container{
+            max-width: 980px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .head1 {
+            font-size: 42px;
+        }
+
+        .search-product {
+            width: 400px;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .section-title-wrapper {
+            max-width: 100%;
+        }
+        .search-product {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .container{
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width:767.98px) {
+        .search-product__inner button{
+            min-width: 80px;
+        }
+        .container {
+            --bs-gutter-x: 2rem;
+        }
+        .landing{
+            font-size: 14px;
+        }
+        .head1 {
+            font-size: 26px;
+        }
+        .desc{
+            font-size: 14px;
+        }
+        .button-dark {
+            font-size: 14px;
+        }
+    }
+

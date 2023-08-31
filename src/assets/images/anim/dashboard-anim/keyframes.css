@@ -1,0 +1,195 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(36000deg);
+  }
+}
+
+@keyframes tickmark {
+  from {
+    transform: scale(0);
+    /* clip-path: polygon(63% 79%, 76% 90%, 69% 100%, 57% 91%); */
+  }
+  to {
+    transform: scale(1);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+  }
+}
+
+@keyframes print {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.85);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.85);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes point01 {
+  0% {
+    transform: translate(-17px, -4px);
+  }
+  18% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateY(233px);
+  }
+}
+
+@keyframes point02 {
+  0% {
+    transform: translate(-144px, -2px);
+  }
+  50% {
+    transform: translate(0.5px, -2.2px);
+  }
+  100% {
+    transform: translateY(140.6px);
+  }
+}
+
+@keyframes point03 {
+  0% {
+    transform: translate(-2px, -1.1px);
+  }
+  100% {
+    transform: translate(180.6px, -1.1px);
+  }
+}
+
+@keyframes point04 {
+  0% {
+    transform: translate(17.5px, -4.5px);
+  }
+  18% {
+    transform: translate(0.5px, -1px);
+  }
+  100% {
+    transform: translateY(233px);
+  }
+}
+
+@keyframes point05 {
+  0% {
+    transform: translate(144px, -2px);
+  }
+  50% {
+    transform: translate(0.5px, -2px);
+  }
+  100% {
+    transform: translate(0.5px, 140.4px);
+  }
+}
+
+@keyframes point06 {
+  0% {
+    transform: translate(2px, -1px);
+  }
+  100% {
+    transform: translate(-184.6px, -1px);
+  }
+}
+
+@keyframes marker {
+  0% {
+    scale: 0.85;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.9;
+  }
+}
+
+@keyframes parcel {
+  0% {
+    transform: translate(8px, -72px);
+  }
+  10% {
+    transform: translate(24px, -64px);
+  }
+  30% {
+    transform: translate(-31px, -26px);
+  }
+  50% {
+    transform: translate(-2px, -10px);
+  }
+  58% {
+    transform: translate(20px, -23px);
+  }
+  68% {
+    transform: translate(44px, -5px);
+  }
+  78% {
+    transform: translate(58px, -17px);
+  }
+  88% {
+    transform: translate(75px, 3px);
+  }
+  95% {
+    transform: translate(93px, -11px);
+  }
+  100% {
+    transform: translate(115px, -7px);
+  }
+}
+
+@keyframes stacks {
+  0% {
+    translate: 0 0;
+  }
+  100% {
+    translate: 0 75px;
+  }
+}
+
+@keyframes cart {
+  0% {
+    transform: translate(-140px, -74px);
+  }
+  100% {
+    transform: translate(136px, 79px);
+  }
+}
+
+@keyframes truck {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-300px, 62px);
+  }
+}
+@keyframes loader {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}

@@ -1,0 +1,74 @@
+/* liveTrackSec */
+
+.liveTrackSec{
+    text-align: center;
+    padding-block: calc(50px * var(--resp)) calc(50px * var(--resp));
+    background: url('../images/landing/tracking/bg.png') no-repeat center center;
+    background-size: auto 100%;
+    min-height: calc(100vh - (90px * var(--resp)));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__img{
+        width: calc(1229px * var(--resp));
+        height: auto;
+        max-width: 100%;
+        margin-inline: auto;
+        position: relative;
+
+        *{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__layer0{
+        position: relative;
+    }
+    &__layer1{
+        position: absolute;
+        inset: 0;
+    }
+    &__layer2{
+        position: absolute;
+        inset: 0;
+    }
+
+    &__desc{
+        text-align: left;
+        &-row{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        &-img, &-number{
+            flex: 0;
+        }
+        &-text{
+            padding: 0 10px;
+        }
+        &-number{
+            background: #222;
+            width: 34px;
+            min-width: 34px;
+            height: 34px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 900;
+        }
+    }
+}
+
+@media (max-width:991.98px) {
+    .liveTrackSec {
+        background-size: 200% auto;
+        background-position: center 15%;
+    }
+    .liveTrackSec__img{
+        margin-block: 20px;
+    }
+}

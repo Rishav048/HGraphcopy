@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes loader {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.loader {
+  -webkit-animation: loader 2s linear infinite forwards;
+  animation: loader 2s linear infinite forwards;
+  transform-origin: 59px 61px;
+}

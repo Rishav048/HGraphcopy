@@ -1,0 +1,13 @@
+[id^="curl"]{
+    animation: curlyAnim 5s linear infinite;
+}
+
+[id^="box"]{
+    transform-origin: 258px 211px;
+    animation: boxAnim 7.5s ease-in-out infinite;
+}
+
+#planet{
+    transform-origin: 258px 211px;
+    animation: planetAnim 7.5s ease-in-out infinite;
+}

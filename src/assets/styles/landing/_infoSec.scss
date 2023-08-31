@@ -1,0 +1,53 @@
+/* infoSec */
+
+.infoSec{
+    position: relative;
+    box-shadow: 3px 4px 4px 0px rgba(151, 134, 154, 0.13);
+    background-color: rgba(255, 255, 255, 0.38);
+    background-image: url('../images/landing/info/deco1.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding-block: calc(55px * var(--resp)) calc(55px * var(--resp));
+    background-size: calc(493px * var(--resp));
+
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--holo-grad, linear-gradient(36deg, #FFB6D5 0%, #FFE3C0 10.00%, #C7FBDB 29.00%, #C7CDF4 43.00%, #FFBCD4 54.00%, #FFE0C3 66.00%, #B0F1D4 76.00%, #C9CEEC 84.00%, #FFC1DA 91.00%, #BDFFE3 100%));
+        opacity: 0.2;
+    }
+    
+
+    > *{
+        position: relative;
+    }
+
+    &__single{
+        max-width: calc(300px * var(--resp));
+        margin-inline: auto;
+        text-align: center;
+        
+        img{
+            display: inline-block;
+            margin-bottom: calc(10px * var(--resp));
+        }
+    }
+    &__title{
+       font-weight: bold;
+       margin-bottom: calc(10px * var(--resp));
+    }
+    &__text{
+        font-size: var(--fs16);
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .infoSec{
+        background-size: 176px auto;
+    }
+    .infoSec__text{
+        font-size: 11px;
+    }
+}

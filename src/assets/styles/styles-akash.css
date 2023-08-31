@@ -1,0 +1,254 @@
+.layer-block {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.layer {
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.layer-image {
+  background: #ffffff;
+  padding: 1rem;
+  border: 2px solid #fff;
+  box-shadow: 3px 4px 4px 0px rgba(151, 134, 154, 0.13);
+  border-radius: 10px;
+  position: relative;
+}
+
+.layer-image img {
+  height: 40px;
+}
+
+.batch-number {
+  background: #efcfe4;
+  padding: 10.6px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 220px;
+  left: 68px;
+}
+
+.number p {
+  font-family: Jost;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+.layer-desc {
+  margin-top: 10px;
+}
+
+.layer-desc p {
+  font-family: Jost;
+  line-height: 17px;
+  letter-spacing: 0em;
+  color: #787878;
+}
+
+.multiple-batch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-layer {
+  background: url(./../images/long-dark-right-waveBg.svg) no-repeat right top;
+  background-color: rgba(255, 255, 255, 0.6);
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.add-new-layer img {
+  height: 20px;
+}
+
+.layer-arrow {
+  margin-left: 17px;
+  height: 12px;
+}
+
+.levels {
+  font-family: Jost;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+}
+
+.layer-arrow-down {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 105px;
+  height: 12px;
+  left: 160px;
+}
+
+.new-layer {
+  font-family: Jost;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+}
+
+.page-desc {
+  margin-bottom: 10px;
+  max-width: 100%;
+  border-radius: 0.625rem;
+  background: url(./../images/page-header-bg.svg) no-repeat right top;
+  background-color: var(--text-dark);
+  max-height: calc(100vh - 9.5rem);
+  top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.page-desc .dark-block-content h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.page-desc-content {
+  padding: 1rem 1.5rem 1rem !important;
+}
+
+.new-product {
+  padding: 80px 22px 80px 34px;
+}
+
+.product-screen-graphics {
+  background: url(./../images/long-dark-black-waveBg.svg) no-repeat right top;
+  background-color: rgba(255, 255, 255, 0.38);
+  border-radius: 0.625rem;
+}
+
+.new-product h3 {
+  display: flex;
+  gap: 10px;
+  font-size: 17px;
+}
+
+.product-chart {
+  border-radius: 0.625rem;
+}
+
+.category-desc-content {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-distribution-listing {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.48rem 0.56rem;
+  align-items: center;
+  margin-block: 1rem 0;
+}
+
+.category-distribution-listing>li {
+  flex: 0 0 49%;
+  max-width: 49%;
+}
+
+.category-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.38);
+  border: 2px solid #fff;
+  border-radius: 0.8rem;
+  height: 3.25rem;
+  gap: 0.63rem;
+}
+
+.category-group .icon-wrap {
+  width: 3.25rem;
+  height: 3.3rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-desc {
+  flex: 1;
+  padding-right: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.description-box {
+  height: 270px;
+  overflow: auto;
+}
+
+.description-box::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.description-box::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+.tracker-wrapper {
+  background-color: rgba(255, 255, 255, 0.38);
+  padding: 1rem;
+  border-radius: 0.625rem;
+}
+
+.tracker-bg {
+  background: url(./../images/tracker-bg.svg) no-repeat right top !important;
+  margin-bottom: 10px;
+  max-width: 100%;
+  border-radius: 0.625rem;
+  background-color: var(--text-dark) !important;
+  max-height: calc(100vh - 9.5rem);
+  top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+
+.tracker-bg .dark-block-content h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tracking-status {
+  background-color: rgba(255, 255, 255, 0.38);
+  padding: 1rem;
+  border-radius: 0.625rem;
+}
+
+.upload-search .form-group--search {
+  width: 39rem !important;
+}
+
+.tracker-product-details {
+  /* background-color: rgba(255, 255, 255, 0.38);
+  padding: 1rem;
+  border-radius: 0.625rem; */
+  border-radius: 10px;
+  border: 2px solid #FFF;
+  background: rgba(255, 255, 255, 0.30);
+  padding: 1rem;
+  margin-top: 13px;
+}
+
+.upload-btn{
+  background-color: #FFFFFF;
+  border: none;
+  color: black;
+  letter-spacing: -0.42px;
+  padding: .625rem;
+  border-radius: 6px;
+} 

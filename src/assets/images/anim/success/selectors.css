@@ -1,0 +1,23 @@
+#arrow1{
+    animation: arrow1Anim 5s linear infinite;
+    transform-origin: 31px 48px;
+}
+#arrow2{
+    transform-origin: 879px 397px;
+    animation: arrow2Anim 5s linear infinite;
+}
+
+#particles{
+    transform-origin: 486px 177px;
+    animation: arrow1Anim 5s linear infinite;
+}
+
+#coin1, #coin6, #coin8, #coin9{
+    animation: coinAnim1 5s linear infinite;
+}
+#coin2, #coin4{
+    animation: coinAnim2 5s linear infinite;
+}
+#coin3, #coin5, #coin7{
+    animation: coinAnim3 5s linear infinite;
+}

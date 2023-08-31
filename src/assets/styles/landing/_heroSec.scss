@@ -1,0 +1,101 @@
+.heroSec{
+    position: relative;
+
+    &__img{
+        margin: 0 auto;
+        display: block;
+        transform: translate3d(-10vw, 0, 0);
+        width: 105vw;
+        max-width: 105vw;
+        height: auto;
+        position: static;
+        margin-top: calc(240px * var(--resp));
+    }
+
+    &__img-mob {
+        margin: 0 auto;
+        display: block;
+        transform: translate3d(0, 0, 0);
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: static;
+        margin-top: calc(240px * var(--resp));
+
+        &-layer0{
+            position: relative;
+            width: 100%;
+        }
+        &-layer1{
+            position: absolute;
+            width: 100%;
+            height: auto;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .desc{
+        font-size: var(--fs20);
+        color: #404040;
+        margin-bottom: calc(30px * var(--resp));
+    }
+
+    &__content{
+        position: absolute;
+        max-width: calc(900px * var(--resp));
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        top: calc(150px * var(--resp));
+        z-index: 1;
+    }
+
+    @keyframes arrowDownAnim {
+        0%, 100%{
+            transform: translateY(0);
+        }
+        35%{
+            transform: translateY(30px);
+        }
+    }
+    &__arrow{
+        position: relative;
+
+        img{
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            height: calc(120px * var(--resp));
+            animation: arrowDownAnim 2.5s ease-in-out infinite;
+        }
+    }
+
+    #truck2{
+        //filter: drop-shadow(2px 4px 6px black);
+    }
+
+   
+}
+
+@media (max-width:991.98px) {
+    .heroSec__content{
+        width: 70%;
+    }
+    .heroSec__arrow img{
+        height: calc(75px * var(--resp));
+    }
+    .heroSec__content .head1, .heroSec .desc{
+        max-width: 95%;
+        margin-inline: auto;
+    }
+    .heroSec .desc{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .heroSec__content{
+        width: 80%;
+    }
+}

@@ -1,0 +1,6 @@
+#screen1, #screen2{
+    animation: screenAnim 5s linear infinite;
+}
+#upload{
+    animation: uploadAnim 5s linear infinite;
+}

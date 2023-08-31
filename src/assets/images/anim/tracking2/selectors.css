@@ -1,0 +1,32 @@
+#loc{
+    opacity: 0;
+    transform-origin: 274px 396px;
+    animation: locAnim 6s linear forwards infinite;
+}
+
+#drone{
+    transform-origin: 165px 127px;
+    transform: rotate(-2.5deg);
+    animation: droneAnim 6s ease-in-out forwards infinite;
+}
+#drone-weight{
+    transform-origin: 165px 127px;
+    transform: rotate(-1.5deg);
+    animation: weightAnim 6s ease-in-out forwards infinite;
+    animation-delay: 1s;
+}
+#fin-1{
+    transform-origin: 80px 54px;
+}
+#fin-2{
+    transform-origin: 245px 55px;
+}
+#fin-3{
+    transform-origin: 81px 174px;
+}
+#fin-4{
+    transform-origin: 248px 176px;
+}
+#fin-1, #fin-2, #fin-3, #fin-4{
+    animation: finAnim 2s ease-in-out infinite;
+}

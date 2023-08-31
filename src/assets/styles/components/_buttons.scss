@@ -1,0 +1,203 @@
+.content-layout,
+.full-width-wrapper {
+  .btn {
+    @include ts(0.3s);
+    &-fab {
+      padding: 0;
+      width: 3.125rem;
+      height: 3.25rem;
+      border-radius: 0.625rem;
+      @include flexBox(inline-flex, null, center, center);
+      @media (max-height: 760px), (max-width: 1450px) {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.575rem;
+      }
+      @media (max-width: 991.98px) {
+        width: 2.8rem;
+        height: 2.8rem;
+        flex-shrink: 0;
+        border-radius: 0.475rem;
+      }
+      @media (max-width: 767.98px) {
+        width: 2.6875rem;
+        height: 2.6875rem;
+      }
+      img {
+        @include ts(0.3s);
+        max-width: 48%;
+        @media (max-height: 760px), (max-width: 1450px) {
+          max-width: 42%;
+        }
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        img {
+          transform: scale(1.07);
+        }
+      }
+      &--green {
+        background: var(--pastel-green);
+        &:hover,
+        &:focus,
+        &:active {
+          background: #c7fbdb;
+        }
+      }
+      &--blue {
+        background: var(--pastel-blue);
+        &:hover,
+        &:focus,
+        &:active {
+          background: #d3d9ff;
+        }
+      }
+      &--pink {
+        background: var(--pastel-pink);
+        &:hover,
+        &:focus,
+        &:active {
+          background: #ffc1da;
+        }
+      }
+      &--dark {
+        background: var(--text-dark);
+        box-shadow: 0px 8px 16px rgba(50, 50, 71, 0.06),
+          0px 8px 8px rgba(50, 50, 71, 0.08);
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:active {
+          background: var(--primary-dark);
+        }
+      }
+    }
+    // Solid fill button
+    &-solid--dark {
+      @include flexBox(inline-flex, null, center, center);
+      gap: 0.2rem;
+      padding: 0 0.55rem;
+      height: 1.63881rem;
+      border-radius: 0.4375rem;
+      background-color: var(--text-dark);
+      box-shadow: 3px 5px 12px 0px #c0c0c0;
+      span {
+        letter-spacing: -0.0225rem;
+      }
+    }
+    // Dark bordered button
+    &-dark-outlined {
+      @include flexBox(inline-flex, null, center, center);
+      background: transparent;
+      min-width: 9.25rem;
+      height: 2.8125rem;
+      border-radius: 0.675rem;
+      border: 1px solid var(--text-dark);
+      @include ts(0.3s);
+      &:hover,
+      &:focus,
+      &:active {
+        color: white;
+        background: var(--text-dark);
+        // background: var(--holo-grad-radial);
+      }
+      @media (max-width: 1450px) {
+        min-width: 7.5rem;
+        height: 2.5rem;
+        border-radius: 0.475rem;
+      }
+    }
+    // Gradient bordered button
+    &-cta--outlined,
+    &-cta--gradient {
+      padding: 0;
+      position: relative;
+      & > div {
+        @include flexBox(inline-flex, null, center, center);
+        min-width: 9.25rem;
+        height: 2.8125rem;
+        border-radius: 0.625rem;
+        background: var(--text-dark);
+        position: relative;
+        z-index: 2;
+        @media (max-width: 1450px) {
+          min-width: 7.5rem;
+          height: 2.5rem;
+          border-radius: 0.475rem;
+        }
+      }
+      &.btn-fab-outlined-gradient {
+        & > div {
+          min-width: 3.125rem;
+          height: 3.125rem;
+          @media (max-height: 760px), (max-width: 1450px) {
+            min-width: 3rem;
+            height: 2.9rem;
+            border-radius: 0.575rem;
+          }
+          @media (max-width: 991.98px) {
+            min-width: 2.8rem;
+            height: 2.7rem;
+            flex-shrink: 0;
+            border-radius: 0.475rem;
+          }
+          @media (max-width: 767.98px) {
+            min-width: 2.6875rem;
+            height: 2.68rem;
+          }
+        }
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        inset: -1.5px;
+        border-radius: 0.75rem;
+        width: calc(100% + 3px);
+        height: calc(100% + 3px);
+        background: var(--holo-grad);
+        background-size: 300%;
+        animation: animateGradientBorder 20s linear infinite;
+        @media (max-width: 1450px) {
+          border-radius: 0.5rem;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          inset: -1px;
+        }
+      }
+      &::after {
+        @include ts(0.5s);
+        filter: blur(1px);
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        // &::before,
+        // &::after {
+        //   animation: animateGradientBorder 20s linear infinite;
+        // }
+        &::after {
+          filter: blur(3px);
+        }
+      }
+    }
+    &-cta--gradient {
+      & > div {
+        background: var(--holo-grad-radial);
+      }
+    }
+  }
+}
+
+@keyframes animateGradientBorder {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

@@ -1,0 +1,105 @@
+/* Variables */
+:root{
+    /* Fonts */
+    --ff1: "Chivo", sans-serif;
+    --ff2: 'Literal';
+
+
+    // Multiple for responsive
+    --resp: 1;
+
+    @media (min-width: 2200px) { // 2k screen
+    --resp: 1.3;
+    }
+
+    @media (min-width: 3000px) { // 4k screen
+    --resp: 2;
+    }
+
+    @media (max-width: 1800px) {
+    --resp: 0.95;
+    }
+
+    @media (max-width: 1400px) {
+    --resp: 0.85;
+    }
+
+    @media (max-width: 1300px) {
+    --resp: 0.8;
+    }
+
+    /* Font sizes */
+    --fs9: 9px;
+    --fs10: 10px;
+    --fs11: 11px;
+    --fs12: 12px;
+    --fs13: 13px;
+    --fs14: calc(14px * var(--resp));
+    --fs15: calc(15px * var(--resp));
+    --fs16: calc(16px * var(--resp));
+    --fs18: calc(18px * var(--resp));
+    --fs20: calc(20px * var(--resp));
+    --fs22: calc(22px * var(--resp));
+    --fs24: calc(24px * var(--resp));
+    --fs26: calc(26px * var(--resp));
+    --fs28: calc(28px * var(--resp));
+    --fs30: calc(30px * var(--resp));
+    --fs32: calc(32px * var(--resp));
+    --fs40: calc(40px * var(--resp));
+    --fs45: calc(45px * var(--resp));
+    --fs50: calc(45px * var(--resp));
+    --fs72: calc(72px * var(--resp));
+    --fs76: calc(76px * var(--resp));
+
+    @media (max-width: 1800px) {
+      --fs72: calc(72px * 0.75);
+      --fs76: calc(76px * 0.75);
+    }
+
+    @media (max-width: 1300px) {
+      --fs72: calc(72px * 0.65);
+      --fs76: calc(76px * 0.65);
+    }
+
+    @media (max-width: 991.98px) {
+    --fs9: 8px;
+    --fs10: 9px;
+    --fs11: 10px;
+    --fs12: 11px;
+    --fs14: 13px;
+    --fs16: 14px;
+    --fs18: 16px;
+    --fs20: 18px;
+    }
+
+    --holo: linear-gradient(36deg, #FFB6D5 0%, #FFE3C0 10.00%, #C7FBDB 29.00%, #C7CDF4 43.00%, #FFBCD4 54.00%, #FFE0C3 66.00%, #B0F1D4 76.00%, #C9CEEC 84.00%, #FFC1DA 91.00%, #BDFFE3 100%);
+
+    --holo-grad: linear-gradient(
+        36deg,
+        #ffb6d5 0%,
+        #ffe3c0 10%,
+        #c7fbdb 29%,
+        #c7cdf4 43%,
+        #ffbcd4 54%,
+        #ffe0c3 66%,
+        #b0f1d4 76%,
+        #c9ceec 84%,
+        #ffc1da 91%,
+        #bdffe3 100%
+    );
+
+  --holo-grad-radial: radial-gradient(
+        187.91% 214.86% at 84.72% 23.47%,
+        #ffb6d5 0%,
+        #ffe3c0 10%,
+        #c7fbdb 29%,
+        #c7cdf4 43%,
+        #ffbcd4 54%,
+        #ffe0c3 66%,
+        #b0f1d4 76%,
+        #c9ceec 84%,
+        #ffc1da 91%,
+        #bdffe3 100%
+  );
+
+}

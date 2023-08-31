@@ -1,0 +1,78 @@
+#heroSectionSvg.active #heroSec__drone{
+    transform-origin: 1491px 120px;
+    animation: droneAnim 7.5s ease-in-out infinite;
+    animation-delay: 4s;
+}
+#heroSectionSvg.active #heroSec__drone-wrapper1{
+    transform-origin: 1491px 120px;
+    transform: rotate(1deg);
+    animation: droneAnimWrapper1 2.5s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+#heroSectionSvg.active #heroSec__drone-wrapper2{
+    transform-origin: 1491px 120px;
+    transform: translateY(220px);
+    animation: droneAnimWrapper2 3s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+#heroSectionSvg.active #heroSec__fins1{
+    transform-origin: 1380px 99px;
+}
+#heroSectionSvg.active #heroSec__fins2{
+    transform-origin: 1490px 37px;
+}
+#heroSectionSvg.active #heroSec__fins3{
+    transform-origin: 1601px 102px;
+}
+#heroSectionSvg.active #heroSec__fins4{
+    transform-origin: 1490px 184px;
+}
+
+#heroSectionSvg.active #heroSec__fins1,
+#heroSectionSvg.active #heroSec__fins2,
+#heroSectionSvg.active #heroSec__fins3,
+#heroSectionSvg.active #heroSec__fins4{
+    animation: finsAnim 3s ease-in-out infinite;
+}
+
+#heroSectionSvg.active #heroSec__scan1,
+#heroSectionSvg.active #heroSec__scan2,
+#heroSectionSvg.active #heroSec__scan3{
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: codeScanAnim 6s linear infinite;
+}
+
+#heroSectionSvg.active #heroSec__scan2{
+    animation-delay: 2s;
+}
+
+#heroSectionSvg.active #heroSec__scan3{
+    animation-delay: 4s;
+}
+
+#heroSectionSvg.active #heroSec__scan3{
+    animation-delay: 4s;
+}
+
+#heroSectionSvg.active #worker1-head{
+    transform-origin: 1257px 464px;
+    animation: worker1HeadAnim 2.5s ease-in-out infinite;
+}
+
+#heroSectionSvg.active #worker2-head{
+    transform-origin: 833px 534px;
+    animation: worker2HeadAnim 2.5s ease-in-out infinite;
+}
+
+#heroSectionSvg.active #worker2{
+    animation: worker2Anim 12.5s ease-in-out infinite;
+}
+#heroSectionSvg.active #heroSection-left-leg{
+    transform-origin: 853px 581px;
+    animation: workser2Leg1Anim 2.5s ease-in-out infinite;
+}
+#heroSectionSvg.active #heroSection-right-leg{
+    transform-origin: 853px 581px;
+    animation: workser2Leg2Anim 2.5s ease-in-out infinite;
+}

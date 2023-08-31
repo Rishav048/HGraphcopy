@@ -1,0 +1,200 @@
+// Common Properties //
+
+// Transitions //
+.ts {
+  &02 {
+    @include ts(0.2s);
+  }
+  &03 {
+    @include ts(0.3s);
+  }
+  &04 {
+    @include ts(0.4s);
+  }
+  &05 {
+    @include ts(0.5s);
+  }
+  &06 {
+    @include ts(0.6s);
+  }
+}
+
+.form {
+  &-control,
+  &-select {
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.greenText {
+  color: var(--success);
+}
+
+.redText {
+  color: var(--fail);
+}
+
+.grayText {
+  color: var(--neutral);
+}
+
+.primaryText {
+  color: var(--text-dark);
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.gradientText {
+  @extend %gradientText !optional;
+}
+.gradientText--radial {
+  @extend %gradientText--radial !optional;
+}
+
+// Common borders //
+.border-white-1 {
+  border: 1px solid #fff;
+}
+.border-white-2 {
+  border: 2px solid #fff;
+}
+
+// Common shadows //
+.main-shadow {
+  box-shadow: var(--main-shadow);
+}
+
+// Common bd-radii //
+.bdrs10 {
+  border-radius: 0.625rem;
+}
+
+// Common backgrounds //
+.translucentBg {
+  background-color: var(--translucentBg);
+}
+
+// Common blocks //
+.block-widget {
+  padding: 1.12rem 1.5rem;
+  background: rgba($color: #fff, $alpha: 0.38);
+  @media (max-width: 1199.98px) {
+    padding: 1rem 1.125rem;
+  }
+  @media (max-width: 767.98px) {
+    padding: 0.91rem;
+  }
+  @media (max-width: 567.98px) {
+    padding: 0.75rem;
+  }
+  &--onHoverGradient {
+    @include ts(0.3s);
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      @include ts(0.3s);
+      border-radius: 0.625rem;
+      background: var(--holo-grad-radial);
+    }
+    &:hover {
+      background-color: transparent;
+      &::after {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+.gradient-widget {
+  padding: 1rem;
+  border-radius: 0.625rem;
+  border: 2px solid #fff;
+  background: url(./../images/block-top-waves-dark.svg) no-repeat left top;
+  box-shadow: 3px 4px 4px 0px rgba(151, 134, 154, 0.13);
+  background-color: rgba($color: #fff, $alpha: 0.6);
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.13;
+    border-radius: 0.625rem;
+    background: var(--holo-grad);
+  }
+}
+.block-wavy-dark {
+  padding: 1.12rem 1.5rem;
+  border-radius: 0.625rem;
+  background: url(./../images/long-dark-widget-waveBg.svg) no-repeat right top;
+  background-color: var(--text-dark);
+}
+
+.text-box {
+  @include flexBox(flex, null, center, null);
+  padding-inline: 1.125rem;
+  height: 3.25rem;
+  @media (max-height: 760px), (max-width: 1450px) {
+    height: 3rem;
+    border-radius: 0.575rem;
+  }
+}
+
+.text-area {
+  padding: 1rem 1.25rem 0.15rem;
+  min-height: 8rem;
+  background-color: rgba($color: #fff, $alpha: 0.6);
+  @media (max-width: 567.98px) {
+    padding-inline: 0.88rem;
+  }
+}
+
+// fab button at right-bottom corner
+.upload-click {
+  right: 0;
+  bottom: 0;
+  .btn-fab {
+    input {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+    }
+    img {
+      pointer-events: none;
+    }
+  }
+  /* Chrome/Safari and web-kit-based browsers (if it doesn't work, try maybe also on the parent/wrapper) */
+  ::-webkit-file-upload-button {
+    cursor: pointer;
+  }
+  /* IE11 (if it doesn't work, try maybe also on the parent/wrapper) */
+  input[type="file"] {
+    cursor: pointer;
+  }
+}
+
+canvas {
+  width: 100%;
+  height: 350px;
+  max-height: 350px;
+}

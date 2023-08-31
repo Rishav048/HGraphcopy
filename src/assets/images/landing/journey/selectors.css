@@ -1,0 +1,60 @@
+.journeySVG.active #journery-arrow0{
+    transform-origin: 507px 367px;
+    opacity: 0;
+    animation: journeyArrow 1s alternate ease-in-out infinite;
+}
+.journeySVG.active #journery-arrow1{
+    transform-origin: 507px 367px;
+    opacity: 0;
+    animation: journeyArrow 1s alternate ease-in-out infinite;
+}
+.journeySVG.active #journery-arrow2{
+    transform-origin: 676px 351px;
+    opacity: 0;
+    animation: journeyArrow 1s alternate ease-in-out infinite;
+}
+.journeySVG.active #journery-arow3{
+    transform-origin: 677px 365px;
+    opacity: 0;
+    animation: journeyArrow 1s alternate ease-in-out infinite;
+}
+.journeySVG.active #journery-arrow4{
+    transform-origin: 649px 385px;
+    opacity: 0;
+    animation: journeyArrow 1s alternate ease-in-out infinite;
+}
+#dotmove1, #dotmove2, #dot-moving_2, #dot-moving{
+    opacity: 0;
+}
+
+
+/* trackDotLayer CSS */
+@keyframes trackDotAnim {
+    from {
+        offset-distance: 0%;
+    }
+    to {
+        offset-distance: 100%;
+    }
+}
+.trackDotLayer svg{
+    position: absolute;
+}
+.trackDotsMoving img{
+    display: inline-block;
+    offset-distance: 0%;
+    position: absolute;
+    animation: trackDotAnim 3.5s linear forwards infinite;
+}
+.trackdotmove1{
+    offset-path: path('M358.002 639L591.502 511V499L498.502 447.5L454.502 420.5L436.5 400L427.5 373.5L430.5 343L442 325.5L458.5 308');
+}
+.trackdotmove2{
+    offset-path: path('M378 306.5L397 321L410.5 326L427.5 321L443.5 312L459 306.5L487 289.5L513.5 279.5L551.5 271L582.5 267H616L645.5 271L666 275.5L684 279.5L691.5 282.5');
+}
+.trackdotmove3{
+    offset-path: path('M811.5 253.5L796.5 262.5L783 270.5L772.5 274H760.5L751 267L736.5 258.5L725.5 253.5H717L699.5 258.5L686.5 267L681.5 274L686.5 282L699.5 288.5L722 298L740.5 310L751 323L760.5 334.5L766.5 348L769.5 362L766.5 378');
+}
+.trackdotmove4{
+    offset-path: path('M807.5 542L783 528.5L757.5 513.5L739 501.5L732.5 492.5L739 483.5L868 408.5L871.5 399L868 394.5L797 356.5H789L767 370.5V385.5L757.5 403L739 422.5L717.5 436.5L694.5 448L676.5 452.5L694.5 459.5L708 467L705 480L684.5 492.5L676.5 501.5V510L688.5 517.5L694.5 521.5L700.5 525.5L694.5 532.5');
+}

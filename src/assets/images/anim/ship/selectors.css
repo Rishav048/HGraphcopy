@@ -1,0 +1,4 @@
+#ship{
+    opacity: 0;
+    animation: shipAnim 8s ease-in-out forwards infinite;
+}

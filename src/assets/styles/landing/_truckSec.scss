@@ -1,0 +1,180 @@
+/* Truck Section */
+#truck2{
+    filter: drop-shadow(2px 4px 6px black);
+}
+.truckSec{
+    position: absolute;
+    left: 45vw;
+    top: 111vh;
+    z-index: 2;
+    transform-origin: center center;
+    width: calc(435px * var( --resp ));
+    height: calc(435px * var( --resp ));
+    pointer-events: none;
+    filter: drop-shadow(2px 4px 6px black);
+    > *{
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: rotate(0);
+        height: auto;
+        transform-origin: center;
+        opacity: 0;
+        transition: 0s ease-in;
+        transform-origin: center center;
+        
+    }
+
+    &__left-down{
+        width: calc(421px * var( --resp ));
+    }
+    &__right-down{
+        width: calc(422px * var( --resp ));
+    }
+    &__left-up{
+        width: calc(435px * var( --resp ));
+    }
+    &__right-up{
+        width: calc(436px * var( --resp ));
+    }
+    &__down{
+        width: calc(163px * var( --resp ));
+        left: 5%;
+    }
+    &__up{
+        transform: rotate(180deg);
+        width: calc(163px * var( --resp ));
+        left: 5%;
+    }
+    &__right{
+        width: calc(439px * var( --resp ));
+    }
+
+    &.downwards  &__left-down{
+        opacity: 1;
+        transition: 0.25s linear;
+        
+    }
+    // &.flip{
+    //     transform-origin: center;
+    //     transform: rotate(-5deg);
+    // }
+    &.flip.queAnsSec-active{
+        transform: rotate(-10deg);
+    }
+    &.downwards.flip  &__left-down{
+        opacity: 0;
+        transition: 0s ease-in;
+    }
+    &.downwards.flip  &__right-down{
+        transform: rotate(0deg);
+        opacity: 1;
+        transition: 0.25s linear;
+        
+    }
+    &.downwards.vertical  &__left-down,
+    &.downwards.vertical  &__right-down,
+    &.downwards.right  &__left-down,
+    &.downwards.right  &__right-down{
+        opacity: 0;
+        transition: 0s ease-in;
+    }
+    &.downwards.vertical  &__down{
+        opacity: 1;
+        transition: 0.25s linear;
+        
+    }
+    &.downwards.right  &__right{
+        opacity: 1;
+        transition: 0.25s linear;
+        
+    }
+    
+    
+
+
+    &.upwards &__right-up{
+        opacity: 1;
+        transition: 0.25s linear;
+        
+    }
+    &.upwards.flip &__right-up{
+        opacity: 0;
+        transition: 0s ease-in;
+    }
+    &.upwards.flip &__left-up{
+        opacity: 1;
+        transition: 0.25s linear;
+        
+    }
+
+    &.upwards.vertical  &__left-up,
+    &.upwards.vertical  &__right-up{
+        opacity: 0;
+        transition: 0s ease-in;
+    }
+    &.upwards.vertical  &__up{
+        opacity: 1;
+        transition: 0.25s linear;
+    }
+    &.upwards.right  &__left-up,
+    &.upwards.right  &__right-up{
+        opacity: 0;
+        transition: 0s ease-in;
+    }
+    &.upwards.right  &__right{
+        opacity: 1;
+        transition: 0.25s linear;
+        
+    }
+}
+
+@media (max-width:1800px) {
+    .truckSec{
+        --resp: 0.85;
+    }
+}
+
+@media (max-width:1400px) {
+    .truckSec{
+        --resp: 0.80;
+    }
+}
+
+@media (max-width:1300px) {
+    .truckSec{
+        --resp: 0.75;
+    }
+}
+
+@media (max-width: 1200px) {
+    .truckSec{
+        position: absolute;
+        left: 45vw;
+        top: 80vh;
+        width: calc(355px * var( --resp ));
+        height: calc(355px * var( --resp ));
+    }
+
+    .footerSec__logo {
+        opacity: 1;
+    }
+    .footerSec__top {
+        margin-bottom: calc(0px * var(--resp));
+    }
+    .footerSec {
+        padding-top: 50px;
+    }
+   
+}
+
+
+@media (max-width: 991.98px) {
+    .truckSec{
+        width: 25vw;
+        height: 25vw;
+    }
+    
+}
+
+

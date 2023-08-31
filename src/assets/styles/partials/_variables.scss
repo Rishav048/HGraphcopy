@@ -1,0 +1,50 @@
+// Color Variables //
+:root {
+  --primary-dark: #000;
+  --text-dark: #222;
+
+  --neutral: #787878;
+  --neutral-light: #efecec;
+  --neutral-100: #8f92a1;
+
+  --white: #ffffff;
+
+  --success: #20946b;
+  --fail: #d90429;
+
+  --pastel-green: #d2f2db;
+  --pastel-blue: #d0e1ee;
+  --pastel-pink: #efcfe4;
+
+  --translucentBg: rgba($color: #fff, $alpha: 0.6);
+
+  --holo-grad: linear-gradient(
+    36deg,
+    #ffb6d5 0%,
+    #ffe3c0 10%,
+    #c7fbdb 29%,
+    #c7cdf4 43%,
+    #ffbcd4 54%,
+    #ffe0c3 66%,
+    #b0f1d4 76%,
+    #c9ceec 84%,
+    #ffc1da 91%,
+    #bdffe3 100%
+  );
+
+  --holo-grad-radial: radial-gradient(
+    187.91% 214.86% at 84.72% 23.47%,
+    #ffb6d5 0%,
+    #ffe3c0 10%,
+    #c7fbdb 29%,
+    #c7cdf4 43%,
+    #ffbcd4 54%,
+    #ffe0c3 66%,
+    #b0f1d4 76%,
+    #c9ceec 84%,
+    #ffc1da 91%,
+    #bdffe3 100%
+  );
+
+  --main-shadow: 3px 4px 4px rgba(151, 134, 154, 0.13);
+}

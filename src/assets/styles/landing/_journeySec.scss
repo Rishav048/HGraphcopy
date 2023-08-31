@@ -1,0 +1,156 @@
+/* journeySec */
+.journeySec{
+    text-align: center;
+    padding-block: calc(50px * var(--resp)) calc(50px * var(--resp));
+    background: url('../images/landing/journey/bg.png') no-repeat center center;
+    background-size: auto 100%;
+    min-height: calc(100vh - (90px * var(--resp)));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__img{
+        display: block;
+        margin-inline: auto;
+        width: 1169px;
+        max-width: 1169px;
+        position: relative;
+
+        .journeySec__layer0{
+            position: relative;
+            width: 1169px;
+            max-width: 1169px;
+        }
+        .journeySec__layer1{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1169px;
+            max-width: 1169px;
+            height: auto;
+        }
+        @media (min-width: 2200px) {
+            transform: scale(1.3);
+            margin-block: 150px;
+        }
+        @media (max-width: 1800px) {
+            transform: scale(0.85);
+        }
+        @media (max-width: 1400px) {
+            transform: scale(0.75) translate3d(-100px, -100px, 0);
+            margin-bottom: -150px;
+        }
+        @media (max-width: 1300px) {
+            transform: scale(0.75) translate3d(-150px, -100px, 0);
+            margin-bottom: -150px;
+        }
+    }
+
+
+
+    /* trackDotLayer CSS */
+    @keyframes trackDotAnim {
+        0% {
+            offset-distance: 0%;
+            opacity: 0;
+        }
+        1%{
+            offset-distance: 0%;
+            opacity: 1;
+        }
+        24%{
+            opacity: 1;
+            offset-distance: 100%;
+        }
+        25%{
+            opacity: 0;
+            offset-distance: 100%;
+        }
+        50%{
+
+        }
+        75%{
+
+        }
+        100%{
+            opacity: 0;
+            offset-distance: 100%;
+        }
+    }
+    .trackDotLayer svg{
+        position: absolute;
+    }
+    .trackDotsMoving{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .trackDotsMoving img{
+        display: inline-block;
+        offset-distance: 0%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .trackDotsMoving.active img{
+        opacity: 0;
+        animation: trackDotAnim 12s linear forwards infinite;
+        animation-delay: 0s;
+    }
+    .trackDotsMoving.active .trackdotmove1{
+        offset-path: path('M357 640.5C357 640.5 586 514.5 589.5 511.5C593 508.5 594 506 592.5 502C591 498 585 495 585 495C585 495 471 432 467.5 429.5C464 427 445.5 416.5 436 398.5C426.5 380.5 426.5 367 429.5 349.5C432.5 332 456 310 456 310');
+    }
+    .trackDotsMoving.active .trackdotmove2{
+        offset-path: path('M378.5 307C378.5 307 396 319.499 397.5 320.5C399 321.5 406 324.999 410 325.5C414 326 418.5 325.428 423 323.5C427.5 321.572 430 320.5 430 320.5C430 320.5 436.5 316.5 439 315C441.5 313.5 444.5 311 452 309C459.5 307 461.5 306.091 465 304.5C468.5 302.909 474 298.5 481 294C488 289.5 499.5 284.999 502.5 284C505.5 283 521 277.999 523.5 277C526 276 538 272.999 543.5 272C549 271 572.5 268 580 267.5C587.5 267 604.5 267.5 612.5 267.5C620.5 267.5 635.5 270 640.5 270.5C645.5 271 662.5 274.5 668.5 276C674.5 277.5 685.5 281 685.5 281');
+        animation-delay: 3s;
+    }
+    .trackDotsMoving.active .trackdotmove3{
+        offset-path: path('M811 253C811 253 784 270 779 272C774.001 274.001 775 274.5 769.5 274.5C764.001 274.501 763.5 274.5 758 272C752.501 269.5 732.5 258 727.5 255C722.501 252.001 724 252 718.5 251.5C713.001 251 712.5 251.5 707 254C701.5 256.5 696 260.5 691.5 263C687 265.5 684.5 266 682.5 269C680.501 272 680.498 275 683.998 279C687.498 283 699.5 286.5 703.5 288C707.5 289.5 714.5 294 719.5 296.5C724.5 299 733 304 736 307C739 310 746 315.5 749 319.5C752 323.5 755.5 326.5 758 331C760.5 335.5 762.5 337 765 344.5C767.5 352 767.5 350 768 357C768.5 364 769.5 372 769.5 372');
+        animation-delay: 6s;
+    }
+    .trackDotsMoving.active .trackdotmove4{
+        offset-path: path('M808 542.5L738 501.999C738 501.999 731.5 498.999 731.5 492.5C731.5 486 742 482.5 742 482.5L859.5 413.499C859.5 413.499 871.5 409 871.5 401.5C871.5 394 861.5 390 861.5 390C861.5 390 836 376.5 832 374.25C828 372 808.5 360.999 803 358.499C797.5 355.999 793.5 356.999 793.5 356.999C785 356.999 768.5 366.5 768.5 374.249C768.5 381.999 767 383.999 764.5 390C762 396 759.5 399.5 754.5 406C749.5 412.5 747.5 413.5 741 420C734.5 426.5 726.5 432 719 435.5C711.5 438.999 700 445.559 694.5 447.5C689 449.441 686.833 450 685 451C685 451 682.5 453.499 688 456.5C693.5 459.5 699.5 462 699.5 462C699.5 462 708.5 465 708.5 471.5C708.5 478 699.5 482.5 699.5 482.5L679.5 494.999C679.5 494.999 674 497 674 503.5C674 510 682.5 513 682.5 513L691 518C691 518 697.556 521.5 700.028 524.5C702.5 527.5 701 528.5 699.5 530C698 531.5 694.5 533 694.5 533');
+        animation-delay: 9s;
+    }
+
+    &__mobImg{
+        position: relative;
+
+        &-layer0{
+            position: relative;
+            width: 100%;
+        }
+        &-layer1{
+            position: absolute;
+            width: 100%;
+            height: auto;
+            left: 0;
+            top: 0;
+        }
+    }
+    
+    @media (max-width: 991.98px) {
+        background: url('../images/landing/journey/hiw-mob-bg.png') no-repeat center center; 
+        background-size: cover;
+    }
+
+    
+}
+
+@media (max-width: 991.98px) {
+    .journeySec{
+        padding-bottom: 60px;
+    }
+    .journeySec .section-title-wrapper{
+        z-index: 1;
+        position: relative;
+    }
+    .journeySec__mobImg{
+        margin-top: 20px;
+    }
+}
+
+

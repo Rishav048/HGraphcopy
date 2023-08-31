@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  @-webkit-keyframes curlyAnim {
+    0%{
+      -webkit-transform: translateX(-25px);
+              transform: translateX(-25px);
+      opacity: 0;
+    }
+    25%{
+      opacity: 1;
+    }
+    75%{
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(25px);
+              transform: translateX(25px);
+    }
+  }
+  
+  @keyframes curlyAnim {
+    0%{
+      -webkit-transform: translateX(-25px);
+              transform: translateX(-25px);
+      opacity: 0;
+    }
+    25%{
+      opacity: 1;
+    }
+    75%{
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(25px);
+              transform: translateX(25px);
+    }
+  }
+  
+  @-webkit-keyframes boxAnim {
+    0%, 100%{
+      -webkit-transform: translate3d(-5px, 0, 0) rotate(-1.5deg);
+              transform: translate3d(-5px, 0, 0) rotate(-1.5deg);
+    }
+    50%{
+      -webkit-transform: translate3d(5px, 0, 0) rotate(1.5deg);
+              transform: translate3d(5px, 0, 0) rotate(1.5deg);
+    }
+  }
+  
+  @keyframes boxAnim {
+    0%, 100%{
+      -webkit-transform: translate3d(-5px, 0, 0) rotate(-1.5deg);
+              transform: translate3d(-5px, 0, 0) rotate(-1.5deg);
+    }
+    50%{
+      -webkit-transform: translate3d(5px, 0, 0) rotate(1.5deg);
+              transform: translate3d(5px, 0, 0) rotate(1.5deg);
+    }
+  }
+  
+  @-webkit-keyframes planetAnim {
+    0%, 100%{
+      -webkit-transform: translate3d(-5px, 0, 0);
+              transform: translate3d(-5px, 0, 0);
+    }
+    50%{
+      -webkit-transform: translate3d(5px, 0, 0);
+              transform: translate3d(5px, 0, 0);
+    }
+  }
+  
+  @keyframes planetAnim {
+    0%, 100%{
+      -webkit-transform: translate3d(-5px, 0, 0);
+              transform: translate3d(-5px, 0, 0);
+    }
+    50%{
+      -webkit-transform: translate3d(5px, 0, 0);
+              transform: translate3d(5px, 0, 0);
+    }
+  }
+
+  [id^="curl"]{
+    -webkit-animation: curlyAnim 5s linear infinite;
+            animation: curlyAnim 5s linear infinite;
+}
+
+[id^="box"]{
+    -webkit-transform-origin: 258px 211px;
+        -ms-transform-origin: 258px 211px;
+            transform-origin: 258px 211px;
+    -webkit-animation: boxAnim 7.5s ease-in-out infinite;
+            animation: boxAnim 7.5s ease-in-out infinite;
+}
+
+#planet{
+    -webkit-transform-origin: 258px 211px;
+        -ms-transform-origin: 258px 211px;
+            transform-origin: 258px 211px;
+    -webkit-animation: planetAnim 7.5s ease-in-out infinite;
+            animation: planetAnim 7.5s ease-in-out infinite;
+}

@@ -1,0 +1,162 @@
+/* queAnsSec */
+
+.queAnsSec{
+    padding-block: calc(50px * var(--resp)) calc(50px * var(--resp));
+    background:url('../images/landing/qna/bg.png') no-repeat center calc(-150px * var(--resp));
+    min-height: calc(100vh - (90px * var(--resp)));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .head1{
+        text-align: center;
+    }
+
+    .desc{
+        text-align: center;
+    }
+
+    
+    .section-title-wrapper{
+        max-width: 60%;
+        margin-bottom: calc(30px * var(--resp));
+        
+        .desc{
+            max-width: 70%;
+            margin-inline: auto;
+        }
+    }
+    .accordion-item{
+        position: relative;
+    }
+    .accordion-button:not(.collapsed){
+        border-bottom: 0;
+    }
+    .accordion{
+        max-width: 50%;
+        margin-inlinE: auto;
+        
+        &-button{
+            font-weight: bold;
+            font-style: italic;
+            padding: calc(40px * var(--resp)) calc(90px * var(--resp)) calc(40px * var(--resp)) calc(50px * var(--resp));
+            font-size: var(--fs18);
+            
+            
+            background: rgba(255, 255, 255, 0.54);
+            
+            border-radius: 10px 10px 0 0!important;
+        }
+
+        &-button.collapsed{
+            border-radius: 10px!important;
+        }
+
+        &-item{
+            margin-bottom: calc(20px * var(--resp));
+            border-radius: 10px!important;
+            box-shadow: 3px 4px 4px 0px rgba(151, 134, 154, 0.13);
+            border: 2px solid #EFECEC;
+            .accordion-body{
+                font-weight: 300;
+                font-style: italic;
+            }
+        }
+    }
+    .accordion-button{
+        background-color: #222222;
+        color: #fff;
+        transition: 0.5s ease-out;
+        border: 0;
+        box-shadow: none;
+        outline: none;
+        background-image: url('../images/landing/qna/deco1.svg');
+        background-repeat: no-repeat;
+        background-size: calc(163px * var(--resp)) auto;
+        background-position: calc(100% - 50px) top;
+        padding-bottom: 20px;
+    }
+    .accordion-collapse{
+        background-color: #fff;
+        color: #222222;
+        transition: 0.5s ease-out;
+        border: 0;
+        box-shadow: none;
+        outline: none;
+    }
+    .accordion-collapse.collapsing, 
+    .accordion-collapse.collapse.show{
+        background: #222222;
+        color: #fff;
+        position: relative;
+        margin-top: -1px;
+    }
+    .accordion-collapse.show::before{
+        content: '';
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+        width: 8px;
+        height: 52px;
+        background: url('../images/landing/qna/arrow.svg') no-repeat center center;
+        background-size: 100% auto;
+        filter: invert(100%);
+        z-index: 111;
+        transform-origin: center;
+        transform: rotate(180deg);
+       
+    }
+    .accordion-button.collapsed{
+        background-color: #fff;
+        background-image: none;
+        color: #222222;
+    }
+    .accordion-button.collapsed::before{
+        content: '';
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+        width: 8px;
+        height: 52px;
+        background: url('../images/landing/qna/arrow.svg') no-repeat center center;
+        background-size: 100% auto;
+    }
+    .accordion-button::after{
+        display: none;
+    }
+    .accordion-collapse{
+        padding: calc(0px * var(--resp)) calc(90px * var(--resp)) calc(0px * var(--resp)) calc(50px * var(--resp));
+    }
+    .accordion-collapse.show{
+        padding: calc(0px * var(--resp)) calc(90px * var(--resp)) calc(40px * var(--resp)) calc(50px * var(--resp));
+    }
+    .accordion-body{
+        padding: 0;
+    }
+
+    @media (max-width: 991.98px) {
+        .section-title-wrapper {
+            max-width: 100%;
+        }
+        .accordion {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .queAnsSec{
+        background-size: cover;
+        min-height: auto;
+    }
+    .queAnsSec .accordion-button {
+        padding: 20px 50px 20px 20px;
+    }
+    .queAnsSec .accordion-collapse,
+    .queAnsSec .accordion-collapse.show{
+        padding: 0px 50px 20px 20px;
+    }
+    .queAnsSec .accordion-button {
+        background-position: calc(100% - 0px) top;
+    }
+}
